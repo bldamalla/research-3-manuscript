@@ -1,0 +1,34 @@
+\section{Background of the Study}
+Zinc oxide is a metal oxide semiconductor that has many different uses based on its structure such as in thin film electronics.
+Zinc oxide thin films are used in a wide variety of applications as gas sensors \cite{florido17} and as photovoltaic cells \cite{fetsense}. In order for the material to perform predictably, it is necessary to be able to correlate processing parameters to structural characteristics and property manifestations \cite{florido17, fetsense}.
+
+Due to the promise of rapid, high-throughput materials processing brought by data science driven approaches to materials processing through materials knowledge systems (MKS) frameworks \cite{gupta15, sun17, yabansu14} the field of materials informatics has grown.
+
+There are several studies on computational simulations regarding material properties based on material structure and vice versa \cite{gupta15, yabansu14}.
+
+The MKS framework, as defined by \citeA{yabansu14}, is dependent on the definition of a microstructure function $m_r^n$, representing the probability density of finding a specific local state $n \in N$, characterized by physical and chemical properties, at a spatial bin $r \in R$. A number of studies have proposed the MKS to use discretized microstructure functions in order to apply statistical measures \cite{gupta15, sun17, yabansu14}. Numerous studies regarding the use of MKS frameworks have produced different microstructure functions depending on the application of the materials of interest ranging from two to ten and more local states \cite{gupta15, sun17, yabansu14}. 
+
+Property homogenization, within a probe volume, can be easily achieved through calculation and regression of calculated two point spatial correlations derived from assumptions of periodicity of the microstructure function in a given probe volume $V$. Research done by \citeA{sun17} has shown that the assumption of periodicity of the microstructure function in a probe volume can make drastic computational improvements to the MKS compared to using finite element methods.
+
+Currently, there exists an implementation of the MKS framework in the Python programming language (PyMKS) \cite{pymks}. The said framework implementation is maintained by researchers Georgia Institute of Technology and has been developed by a number of contributors to the repository. It is currently available on Github as an open-source project licensed under the MIT license.
+
+As a rapidly growing computational language, Julia has proven to be more efficient and effective as other computational programming languages such as Matlab, Python (NumPy), and Octave \cite{julia15}. Examples of scientific applications are as a simulator for different systems dynamics through BioSimulator.jl \cite{biosim}, for different quantum systems through QuantumOptics.jl \cite{qoptics}, and modeling protein electrostatics using finite element methods through NESSie.jl \cite{nessie}.
+
+\section{Objectives of the Study}
+The study aims to be able to define a new, simple microstructure function for the effective creation of MKS in developing material PSP linkages for the distribution of adhered particles of zinc oxide onto glass substrates.
+Specifically, the study will attempt to cover and discuss necessary measures that will aid in the creation of effective discrete spatial statistics of the particles, particle boundaries, and null spaces within the material structure, which will be used to find correlations to manipulations in the number of deposition cycles and annealing temperature.
+
+The study also aims to be able to create a MKS methodology template in the Julia programming language.
+Specifically, the study aims to provide a new platform for materials informatics using the features of the programming language.
+
+
+\section{Significance of the Study}
+Some of the numerous applications of zinc oxide thin films are dependent on the different distribution-dependent properties of the material, including thin film sheet resistance, porosity, and transmittance.
+The computational modeling of zinc oxide material structure with respect to processing parameters and properties is a significant milestone for the rapid, high-throughput production of precise application-specific materials.
+
+The expression of the MKS framework, case-dependent or independent, in multiple languages allows for the growth of the framework into several applications allowing open source communities to further develop the capabilities of the framework.
+
+\section{Scope and Limitations}
+The study mainly focuses on determining a family of microstructure functions that can be useful for building PSP linkages given sufficient material characterization.
+Since characterization is not readily accessible, structural characteristics used may be of low resolution.
+Thus, heavy caution must be observed in interpreting the results of the study.
