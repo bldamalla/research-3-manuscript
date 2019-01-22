@@ -1,0 +1,28 @@
+% latex test input
+\documentclass{pshsmanuscript}
+
+% preamble
+\usepackage{lipsum}
+\usepackage{import}
+
+\usepackage{amsmath}
+
+% other options
+\doublespacing
+\setlength\parindent{0.5in}
+
+\begin{document}
+
+\tableofcontents
+
+\pagebreak
+\chapter{Introduction}
+\include{intro}
+\pagebreak
+
+\begin{singlespace}
+  \bibliographystyle{apacite}
+  \bibliography{main}
+\end{singlespace}
+
+\end{document}
