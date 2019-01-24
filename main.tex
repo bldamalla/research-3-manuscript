@@ -6,6 +6,10 @@
 \usepackage{import}
 
 \usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{amsfonts}
+
+\usepackage{graphicx}
 
 % other options
 \doublespacing
@@ -20,9 +24,12 @@
 
 \maketitle
 \newpage
-\tableofcontents
-\newpage
 
+\pagenumbering{roman}
+\include{start}
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
 \pagebreak
 \include{intro}
 \include{methodology}
