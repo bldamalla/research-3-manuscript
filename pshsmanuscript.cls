@@ -6,4 +6,4 @@
 \RequirePackage{setspace}
 \RequirePackage{apacite}
 \RequirePackage{indentfirst}
-\usepackage{mathptmx}
+\RequirePackage{mathptmx}
