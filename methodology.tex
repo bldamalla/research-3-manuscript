@@ -49,58 +49,10 @@ The schematic for the four-point probe mechanism are shown in Figure \ref{fig:fp
   \label{fig:fpt}
 \end{figure}
 
-<<<<<<< HEAD
 \section{Model creation and data analysis}
 There are a total of two discrete microstructure functions (DMF) that are studied.
 The dimensions of the probe volume $V$ were chosen as odd products of small primes (2, 3, 5, and 7) to aid in the computation of two point spatial correlations.
 Two point spatial correlations were derived from optical microscopy imges through the definition of measures \cite{gupta15}.
-=======
-\section{Model Creation}
-\subsection{Definition of microstructure functions}
-There are a total of 20 discrete microstructure functions (DMF) that were studied for the study.
-The definitions are divided into four categories depending on which of two axes will the DMFs be assumed to be periodic in.
-Each of the four categories contains five DMFs, which differ based on the method for determining the number of discrete local states within a certain probe volume $V$.
-
-The functions can be summarized as Table \ref{tab:fxns}.
-The dimensions of the probe volume $V$ were chosen as odd products of small primes (2, 3, 5, and 7) to aid in the computation of two point spatial correlations, as will be discussed in the following subsection, with the exception of one function, with accounts for the dimensions of the size of a high resolution digital image.
-
-\begin{table}
-  \caption{Summary of discrete microstructure functions}
-  \centering
-  \begin{tabular}{c c c}
-    \hline\hline
-    Periodic axes & Local states & Size of $V$ \\
-    \hline
-    Both $i, j$ & Two & $225 \times 225$ \\
-    Both $i, j$ & Two & $441 \times 441$ \\
-    Both $i, j$ & Three & $225 \times 225$ \\
-    Both $i, j$ & Three & $441 \times 441$ \\
-    Both $i, j$ & Three & $1920 \times 1080$ \\
-    \hline
-    $j$ & Two & $225 \times 225$ \\
-    $j$ & Two & $441 \times 441$ \\
-    $j$ & Three & $225 \times 225$ \\
-    $j$ & Three & $441 \times 441$ \\
-    $j$ & Three & $1920 \times 1080$ \\
-    \hline
-    $i$ & Two & $225 \times 225$ \\
-    $i$ & Two & $441 \times 441$ \\
-    $i$ & Three & $225 \times 225$ \\
-    $i$ & Three & $441 \times 441$ \\
-    $i$ & Three & $1920 \times 1080$ \\
-    \hline
-    None & Two & $225 \times 225$ \\
-    None & Two & $441 \times 441$ \\
-    None & Three & $225 \times 225$ \\
-    None & Three & $441 \times 441$ \\
-    None & Three & $1920 \times 1080$ \\[1ex]
-  \end{tabular}
-  \label{tab:fxns}
-\end{table}
-
-\subsection{Calculation of two-point spatial correlations}
-Two point spatial correlations were derived from optical microscopy images through the definition of the measures \cite{gupta15}.
->>>>>>> Methodology changes
 
 \[
   m^{np}_r = \dfrac{1}{S_rN} \sum_{i=0}^{N} \sum_{i=0}^{R} m^p_r m^n_r
@@ -108,35 +60,15 @@ Two point spatial correlations were derived from optical microscopy images throu
 
 where $n$ and $p$ are the discrete local states of interest and $r$ is the spatial bin of interest.
 
-<<<<<<< HEAD
 Image data were transformed into Julia 2D arrays \cite{julia15} and further into a user defined data structure named \emph{MaterialImage} which accounts for the parameters used for defining the DMFs.
 There are a total of 20 sets two point spatial correlations that will be considered.
 
 Since the preferred orientation of the fabrication of thin films is unknown, each of the three thin films have four hypothesized orientations based on circular permuations of the orientation matrix (Figure \ref{fig:orient}).
-=======
-Image data were transformed into Julia 2D arrays \cite{julia15} and further into a user defined data structure named \emph{MaterialImage} which accounts for the parameters used for defining the DMFs (from the previous subsection).
-There were a total of 20 sets two point spatial correlations that were considered.
-
-\subsection{Determination of optimal film orientation}
-Since the preferred orientation of the fabrication of thin films was unknown, each of the three thin films have four hypothesized orientations based on circular permuations of the orientation matrix (Figure \ref{fig:orient}).
->>>>>>> Methodology changes
 
 For each of the calculated two point spatial correlations, the values have undergone principal component analysis to obtain the orthogonal latent descriptors \cite{gupta15, sun17}.
 This is done with \emph{MultivariateStats.jl}, a package available for multivariate statistical analysis \cite{mvstats}.
 Optimal orientation is determined when the variance of the dimensionally-reduced two point statistics, \textit{i.e. the matrix trace of the covariance matrix} is minimized.
 
-<<<<<<< HEAD
 The plots for the two-point statistics are manually compared.
 Partial least squares analysis (PLSA) is done to compare the ability of the DMF to capture the variation of derived sheet resistance values.
 Evaluation of the optimal microstructure function will be based on the following parameters: variance capture using PLSA and qualitative assessment of clustering of microstructure ensembles.
-=======
-\subsection{Determination of optimal microstructure function}
-The plots for the two-point statistics were manually compared.
-Partial least squares analysis (PLSA) was done to compare the ability of the DMF to capture the variation of derived sheet resistance values.
-Evaluation of the optimal microstructure function was based on the following parameters:
-
-\begin{enumerate}
-  \item Variance capture via PLSA
-  \item Qualitative assessment of clustering of microstructure ensembles
-\end{enumerate}
->>>>>>> Methodology changes
