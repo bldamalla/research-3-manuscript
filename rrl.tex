@@ -3,8 +3,74 @@
 \section{Zinc oxide}
 
 \subsection{Crystal structure}
+
+One of the key characteristics governing most of the properties of condensed matter is the crystal structure of a material.
+The crystal structure is thus important in characterizing material.
+
+Zinc oxide is a metal oxide semiconductor having a hexagonal crystal structure.
+In studies such as those of \citeA{gao08} and \citeA{fdoping}, there are three identified main peaks in the diffaction pattern (see Characterization Methods) of zinc oxide.
+These three peaks are the first three peaks in the diffraction pattern of ZnO found roughly at $2\theta \in \{32\degg , 34\degg , 36\degg\}$.
+The planes of diffraction are $(100)$, $(002)$, and $(101)$, respectively, with the highest peaks at the $(002)$ plane suggesting preferrential orientation in the \textit{c}-axis.
+With regard to flat surfaces, this suggests formation of vertical rod-like structures from the substrates.
+
+Numerous studies such as those of \citeA{gao08}, \citeA{vargas08}, and \citeA{fdoping} have shown experimentally that this structure of zinc oxide can be achieved even through production using different processes.
+All of these showed that manipulating the processing parameters have various effects on the crystalline structure of the material.
+They have effects on the crystallite size and relative intensities (diffraction).
+It is worth noting that the processes used for fabrication are SILAR processes, as will be described in a later section.
+
+The three SILAR processes analyzed by \citeA{vargas08} showed differences in the relative intensities of the diffraction peaks.
+It can also be noted that some of the diffraction peaks present in films fabricated by a process were not found in another.
+\citeA{fdoping} showed how different doping concentrations affected the overall crystallinity of the thin film structure.
+The results, as expected, showed that different processing parameters lead to different material crystal structures.
+
 \subsection{Electrical properties}
+
+Studies have shown that zinc oxide thin films exhibit a wide variety of interesting properties such as  \emph{band gap} and \emph{electrical resistivity}.
+Those of \citeA{fdoping} and \citeA{vargas08} made empirical studies on the effects of different processes on the electrical properties of ZnO.
+Specifically, \citeA{fdoping} compared band gaps and electrical resistivity, while \citeA{vargas08} compared band gap.
+Just as different processing parameters have led to differences in material crystal structures, the difference in crys
+
+Research on zinc oxide thin films as gas sensors by exploiting the reversible reactions of reducing gases to the surface of the material \cite{florido17}.
+These surface reactions change the movement of charges within the crystal structures of materials affecting their \emph{resistivity}.
+There is more literature that shows how crystal structures affect the electrical resistivity and gas sensing response of metal oxide semiconductors from theoretical studies such as of \citeA{dey} and \citeA{powerlaw} to \textit{in silica} studies like involving DFT \cite{dft}; however, these will not be focused on in this study.
+
+The importance of being able to computationally predict the properties similar to the \textit{in silica} study referred to above is a huge milestone in predicting properties given the structure of a material.
+
 \subsection{Successive ionic layer adhesion and reaction processes}
+
+Successive ionic layer adhesion and reaction (SILAR) processes are a family of processes wherein materials are deposited onto substrates by means of successive surface reactions.
+The processes described will be based on the study by \citeA{gao08}.
+
+The processes consist of two main phases: a \emph{deposition} phase and an \emph{annealing} phase.
+The deposition phase in material fabrication involves a set of precursor solutions: cationic solutions, complexing solutions, and anionic solutions, to perform the reactions on the surface of the substrate.
+The three solutions are aqueous \cite{gao08}.
+Thus, the substrate surface must be hydrophilic for the solutions to react in the and adhere.
+However, naturally, glass is hydrophobic which can be noted by the formation of droplets on its surface.
+\citeA{gao08} suggested the following methodology to develop the hydrophilic property of glass surface: boil the substrates in dilute $H_2SO_4$ ($1:10$ v/v) for $30$ minutes, then completely rinse the substrates in ethanol, acetone, and de-ionized water.
+Similar processes were also done by \citeA{fdoping} and \citeA{vargas08}.
+
+A study conducted by \citeA{vargas2} was performed in order to determine the effects of three different number of deposition cycles to thin film crystallinity.
+It was observed that the relative intensities of the diffraction peaks drastically increased with the number of deposition cycles.
+However, there was no literature, as of this manuscript, that can be used to explain this phenomenon.
+It should be noted that the studies conducted by \citeA{vargas2} and \citeA{vargas08} differ in the parameter tested in SILAR processing.
+
+In addition to the precursor solutions and substrate properties described, another factor that affects the output of SILAR processes is the drying interval being deployed between each dipping processes \cite{gao08}.
+In the cited literature, the researchers compared the effects of two drying processes in the crystallinity of the thin films.
+In applying a drying process of $3-5$ or $30$ seconds between each deposition \emph{cycle}, the resulting thin films have a defined and \emph{periodic} microstructure.
+Those films processed with no drying process between each deposition cycle were found to have \emph{amorphous} microstructures.
+
+The annealing process in SILAR processes is crucial for the growth of crystal structures in the thin film.
+According to \citeA{fdoping}, it is still unknown how, specifically, annealing affects this growth.
+There are numerous \emph{empirical} studies regarding this topic, however, there is currently no solid theory known to the researchers as of date.
+
+In the study of \citeA{fdoping}, it can be observed through the XRD spectra that annealing plays a huge role in the development of crystal structures.
+It can be seen that the measured intensities at the Bragg angles stated above have increased.
+This means that better crystallinity is achieved through thermal annealing.
+The study of \citeA{gao08} has found that there can also be different effects on thin film crystallinity based on the annealing environment used.
+It can be inferred from the data that the adjusting the annealing environment leads to different average crystallite sizes within the thin films.
+
+Studies by \citeA{vargas08}, \citeA{vargas2}, \citeA{gao08}, and \citeA{fdoping} all have used different precursor solutions in preparing thin films.
+
 \subsection{Characterization methods}
 \subsubsection{X-ray diffraction}
 \subsubsection{Optical microscopy}
@@ -41,7 +107,7 @@
 \subsubsection{Function representation}
 \subsubsection{Mathematical representation}
 \subsection{Published computational studies and applications}
-\subsubsection{Nessie.jl}
+\subsubsection{NESSie.jl}
 \subsubsection{JuMP.jl}
 \subsubsection{BioSimulator.jl}
 \subsubsection{QuantumOptics.jl}
