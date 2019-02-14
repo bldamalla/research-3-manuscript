@@ -28,7 +28,7 @@ The results, as expected, showed that different processing parameters lead to di
 Studies have shown that zinc oxide thin films exhibit a wide variety of interesting properties such as  \emph{band gap} and \emph{electrical resistivity}.
 Those of \citeA{fdoping} and \citeA{vargas08} made empirical studies on the effects of different processes on the electrical properties of ZnO.
 Specifically, \citeA{fdoping} compared band gaps and electrical resistivity, while \citeA{vargas08} compared band gap.
-Just as different processing parameters have led to differences in material crystal structures, the difference in crys
+Just as different processing parameters have led to differences in material crystal structures, the difference in crystal structures also reflect differences in material property.
 
 Research on zinc oxide thin films as gas sensors by exploiting the reversible reactions of reducing gases to the surface of the material \cite{florido17}.
 These surface reactions change the movement of charges within the crystal structures of materials affecting their \emph{resistivity}.
@@ -74,10 +74,60 @@ Studies by \citeA{vargas08}, \citeA{vargas2}, \citeA{gao08}, and \citeA{fdoping}
 \section{Multiscale Modeling}
 
 \subsection{Representative volume elements}
+
+Crucial in most multiscale modeling methodologies is the development of elements of finite volume that reflects the general physics of the macrostructure.
+Representative volume elements (RVE) are images of the material chosen such that the overall distribution of the \emph{local states} and their interactions may be able to represent the underlying mechanisms (physics) of the whole structure at a particular length scale.
+From here onward, the terms regarding RVEs will be defined as follows:
+
+\begin{enumerate}
+  \item Probe volume ($S$) - \emph{material volume} being studied (same as RVE)
+  \item Voxel ($s$) - \emph{small, discrete} volume elements taken from an RVE ($s \in S$)
+  \item Local state space ($H$) - set of all realizable physical and chemical properties representing material characteristics at a \emph{particular length scale}
+  \item Local state ($h$) - an element of the local state space ($h \in H$)
+  \item Boundary conditions ($\aleph$) - a set of requirements for interactions within $S$
+\end{enumerate}
+
+These definitions are important in establishing concepts regarding the use of RVEs in different property homogenization models.
+As will be seen in later discussions, $S$ and $\aleph$, but not $s, H, h$, will have slightly varied definitions depending on the data needed by specific modeling techniques.
+
 \subsection{Finite element methods}
+
+Finite element methods rely on computer simulations of mechanical theories on finite, discrete elements $s \in S$.
+This means that this method can be used to simulate and study the effects of mechanical systems with respect to space and their interactions with one another.
+An interesting study done by \citeA{bone} dealt with finding an optimal $\aleph$, with regard to the case, conditions to be met incorporating the interaction of collagen fibers ($h_1 \in H$) and the surrounding cellular matrix ($h_2 \in H$).
+In finite element considerations, however, these are not the only conditions that must be followed.
+Energy conformation conditions also have to be observed \cite{cosserat}.
+
+The work of \citeA{cosserat} dealt with the establishment of a mathematical derivation of a model for microstate property homogenization.
+Their work, split into six sections of rigorous mathematical manipulation, involves these steps: expression of Cauchy continuum energy and mechanical conformation conditions into Cosserat continuum conditions, the development of a homogenization model, and establishment of $\aleph$.
+The steps in proof done by these researchers present a method in developing homogenization models using different representations of an RVE.
+It is worth noting that the definition of the RVE is flexible for as long as proper conditions are imposed.
+
+These finite element methods are \emph{very} effective in modeling the interactions of different materials and their configurations within an RVE.
+Due to the complexity of the implementation of this method, computer simulations may run for hours, which is not efficient in rapid, high-throughput materials processing.
+
 \subsection{Deep learning methods}
-\subsection{Property localization}
-\subsection{Property homogenization}
+
+With the development of the various fields of artificial intelligence, many different modeling techniques have been developed, especially in the areas of image recognition, and multivariable property prediction with the use of convolutional and artifical neural networks.
+A homogenization model was developed by \citeA{cnn} for predicting the ionic conductivity of ceramics using convolutional neural networks.
+The research was done in order to determine the feasibility of using convolutional neural networks in microstructure image processing, and to predict the desired property from image analyses.
+
+The RVEs used by the CNN are \emph{raw} images of the material at particular length scales.
+The researchers aimed to determine how the length scale of the RVE affected the accuracy of their model.
+Note that the computer images are analyzed through discrete elements $s$ as image pixels.
+The study used a completely different representation of RVEs from those used by finite element studies such as of \citeA{bone} and \citeA{cosserat}.
+In the study it has been found that it is possible to perform image analysis on a small number of RVEs with a definite size (enough to distinguish between different $h$).
+The researchers were able to only use seven images in the prediction of the property of interest with ``acceptable'' accuracy.
+
+One of the problems with using advanced artificial intelligence methodologies, as admitted by \citeA{cnn}, was the uninterpretability of the model.
+In order to circumvent this problem and to provide a basis for model classification and prediction, the researchers have provided ``saliency maps'' to see how the CNN classified the local states and inferred the interaction of such local states through implicit $\aleph$.
+This may be a good protocol on studying how CNNs work internally and provide a one-way theories to predict desired properties.
+
+Another problem posed by the use of CNNs, not mentioned in the research, is the unidirectional flow of information.
+As evident from the research, the desired property, given different RVEs can be calculated; however, even with the introduction of saliency maps, it may still be difficult to reconstruct an RVE and its processing history from the properties desired.
+This is the case with most engineering problems.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Materials knowledge systems}
 
@@ -88,6 +138,8 @@ Studies by \citeA{vargas08}, \citeA{vargas2}, \citeA{gao08}, and \citeA{fdoping}
 \subsubsection{Low dimensional space representation}
 \paragraph{Principal component analysis}
 \paragraph{Partial least squares analysis}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Julia}
 
