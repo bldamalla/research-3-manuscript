@@ -132,6 +132,41 @@ This is the case with most engineering problems.
 \section{Materials knowledge systems}
 
 \subsection{Microstructure functions}
+
+The materials knowledge framework is a data science framework developed for the relatively simple modeling of material process, structure, and property.
+This framework will be the modeling methodology of interest of the study.
+A careful review of the data analysis framework will be given as follows.
+
+The materials knowledge systems (MKS) framework rests upon the definition of microstructure functions.
+This probability density function ($m(\vec{x}, h)$) has the following properties \cite{delin}:
+
+\[
+  m(\vec{x}, h)dH = \dfrac{^{h}V}{V}\biggr\rvert_{\vec{x}}
+\]
+
+This means that the probability density of finding a local state $dH = h$ can be expressed as the volume fraction of the $h$ within $V = dS$.
+By summing over the local state space $H$, the probability should add up to $1$ by definition of the local state space.
+
+\[
+  \int_H m(\vec{x}, h)dH = 1
+\]
+
+From these descriptions, analogous expressions can be defined for discrete data.
+
+\[
+  \sum_{S} {^hm_s} = ^hVS \hspace{1in}
+  \sum_{h=1}^{H} {^hm_s} = 1
+\]
+
+The probability function $^hm_s$ gives the volume fraction occupied (the expected probability) of the local state defined by $h$ in the voxel $s$.
+
+With the definition of discrete microstructure functions, it is possible \emph{for computers} to perform calculations from various data relating to microstructure images.
+Operations on probabilities and images may be applied.
+Examples of these operations include calculation of spatial statisitics (\textit{N}-point spatial correlations), which have been used in quite a number of studies.
+In each of these studies, there appears to be a different method for defining $h_i$, and hence $H$, depending on the properties being studied in materials.
+
+Studies conducted by \citeA{yabansu14}, \citeA{delin}, \citeA{bunge}, and \citeA{sun17} have used different methods in defining the local state space depending on which definition will yield more \emph{computationally efficient} results.
+
 \subsection{One-point spatial correlations}
 \subsection{Two-point spatial correlations}
 \subsubsection{Calculation of values}
