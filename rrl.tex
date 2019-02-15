@@ -154,20 +154,54 @@ By summing over the local state space $H$, the probability should add up to $1$ 
 From these descriptions, analogous expressions can be defined for discrete data.
 
 \[
-  \sum_{S} {^hm_s} = ^hVS \hspace{1in}
+  \sum_{S} {^hm_s} = ^hV\lvert S\rvert \hspace{1in}
   \sum_{h=1}^{H} {^hm_s} = 1
 \]
 
 The probability function $^hm_s$ gives the volume fraction occupied (the expected probability) of the local state defined by $h$ in the voxel $s$.
 
-With the definition of discrete microstructure functions, it is possible \emph{for computers} to perform calculations from various data relating to microstructure images.
+With the definition of discrete microstructure functions, it is possible \emph{for computers} to perform calculations from various data relating to RVEs.
 Operations on probabilities and images may be applied.
 Examples of these operations include calculation of spatial statisitics (\textit{N}-point spatial correlations), which have been used in quite a number of studies.
 In each of these studies, there appears to be a different method for defining $h_i$, and hence $H$, depending on the properties being studied in materials.
 
 Studies conducted by \citeA{yabansu14}, \citeA{delin}, \citeA{bunge}, and \citeA{sun17} have used different methods in defining the local state space depending on which definition will yield more \emph{computationally efficient} results.
+The ones cited are studies on two-phase material systems, polycrystalline systems, and other composite material systems.
+
+\citeA{sun17} studied dendritic structures in a \emph{two-phase} non-parallelepiped RVEs.
+They have shown through a case study that it is possible to apply different image processing techniques such as image masking and padding for the calculation of spatial correlations from modified microstructure functions.
+They have done this through the introduction of padding modifications and masking functions, which directly change the algorithm for the calculation of spatial correlations.
+In this two-phased material structure, given that image resolution is fine enough, states $h_0$ and $h_1$, \emph{eigenstates}, are assigned to the voxels $s \in S$.
+These eigenstates are defined as follows:
+
+\[
+  h_0 = 0 \hspace{1in}
+  h_1 = 1
+\]
+
+The use of $h_1$ for the identification of a local state $h$ indicates that $h_1$ occupies the entirety of $s$, while $h_0$ is used for representing the other local state.
+
+\citeA{yabansu14} and \citeA{bunge} did studies on the possible prediction of properties in polycrystalline material systems with the use of the MKS framework.
+Since both studies have noticed the tremendous amount of local state representation using Euler-Bunge angles, they have decided to use generalized spherical harmonics to define $H$.
+With these efforts, the computations were drastically reduced!
+The method used will not be discussed in detail for it is outside the scope and applications of the study.
+
+\citeA{delin} worked on the delineation of the properties of spatial correlations in multiphase composite systems.
+They have introduced the concept of \emph{hulls} such as one-point and two-point spatial correlation hulls that define the physically realizable spatial correlations given the training dataset.
 
 \subsection{One-point spatial correlations}
+
+One-point spatial correlations define the expected probability of the local state to appear in the whole RVE.
+This is equivalent to the \emph{volume fraction} occupied by a certain $h$ for in $S$.
+By rearrangement of an equation above:
+
+\[
+  f(h) = \dfrac{1}{\lvert S\rvert} \sum_{S} {^hm_s} = {^hV}
+\]
+
+Using the microstructure functions themselves, the one-point statistic for a discrete distinguishable $h$ is the \emph{volume average} of the probability.
+The calculation of the this statistic is easy and increases linearly with respect to the size of the RVE.
+
 \subsection{Two-point spatial correlations}
 \subsubsection{Calculation of values}
 \subsubsection{Low dimensional space representation}
