@@ -165,7 +165,7 @@ Operations on probabilities and images may be applied.
 Examples of these operations include calculation of spatial statisitics (\textit{N}-point spatial correlations), which have been used in quite a number of studies.
 In each of these studies, there appears to be a different method for defining $h_i$, and hence $H$, depending on the properties being studied in materials.
 
-Studies conducted by \citeA{yabansu14}, \citeA{delin}, \citeA{bunge}, and \citeA{sun17} have used different methods in defining the local state space depending on which definition will yield more \emph{computationally efficient} results.
+Studies conducted by \citeA{yabansu14}, \citeA{delin}, \citeA{bunge}, and \citeA{sun17} have used different methods in defining the local state space $H$ depending on which definition will yield more \emph{computationally efficient} results.
 The ones cited are studies on two-phase material systems, polycrystalline systems, and other composite material systems.
 
 \citeA{sun17} studied dendritic structures in a \emph{two-phase} non-parallelepiped RVEs.
@@ -180,6 +180,7 @@ These eigenstates are defined as follows:
 \]
 
 The use of $h_1$ for the identification of a local state $h$ indicates that $h_1$ occupies the entirety of $s$, while $h_0$ is used for representing the other local state.
+One problem as noted of this classification is the fact that the definition of $H$ may be based on researcher bias \cite{cnn}.
 
 \citeA{yabansu14} and \citeA{bunge} did studies on the possible prediction of properties in polycrystalline material systems with the use of the MKS framework.
 Since both studies have noticed the tremendous amount of local state representation using Euler-Bunge angles, they have decided to use generalized spherical harmonics to define $H$.
@@ -188,6 +189,10 @@ The method used will not be discussed in detail for it is outside the scope and 
 
 \citeA{delin} worked on the delineation of the properties of spatial correlations in multiphase composite systems.
 They have introduced the concept of \emph{hulls} such as one-point and two-point spatial correlation hulls that define the physically realizable spatial correlations given the training dataset.
+
+Discrete microstructure functions $^hm_s$ explain \emph{only} the probability density of finding local states $h$ at small voxels $s$ \cite{polar}.
+They have also remarked that the measure is not \textit{translation-invariant}, \textit{i.e., assumptions in statistics are not directly applicable}.
+This can be circumvented by the definition of \emph{N-point statistics} such as one-point and two-point spatial correlations as will be discussed for the next subsections.
 
 \subsection{One-point spatial correlations}
 
@@ -203,18 +208,24 @@ Using the microstructure functions themselves, the one-point statistic for a dis
 The calculation of the this statistic is easy and increases linearly with respect to the size of the RVE.
 
 \subsection{Two-point spatial correlations}
+
+Two-point correlations are a type of N-point statistics that define the \emph{joint probability} of locating two local states within voxels $s$ separated by a displacement vector $\vec{t}$.
+Usually, to define these statistics and easily evaluate them, the vectors are assigned into indices from $0$ to $\lvert S-1\rvert$.
+The ``translation-invariant'' two-point spatial correlations are defined as:
+
+\[
+  f(hh'\lvert t) = \dfrac{1}{\lvert S\rvert}\sum_{t \in S} {^hm_s} \cdot ^{h'}m_{s+t}
+\]
+
+The studies mentioned above, including \citeA{polar}, have different methods of calculating two-point spatial correlations because of the difference in definition of the microstructure function.
+
 \subsubsection{Calculation of values}
-\subsubsection{Low dimensional space representation}
-\paragraph{Principal component analysis}
-\paragraph{Partial least squares analysis}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+All of the cited literature on the topic similarly defined two-point spatial correlations as a \emph{convolution} operation on two probability densities.
+They all have exploited the transformation of the microstructure function into spectral space via discrete Fourier transforms (DFT).
+The properties of complex numbers have been exploited in many different ways by the cited literature in calculating the said statistics.
 
-\section{Julia}
-
-\subsection{Comparison with currently used languages}
-\subsection{Published computational studies and applications}
-\subsubsection{NESSie.jl}
-\subsubsection{JuMP.jl}
-\subsubsection{BioSimulator.jl}
-\subsubsection{QuantumOptics.jl}
+The calculations in spectral space have been shown to have drastically reduced time complexities \cite{delin}.
+\citeA{polar} used the expression of complex numbers in polar form to describe ``rotationally invariant'' spatial correlations in spectral space.
+The use of mask functions and padding operations \cite{sun17} redefined the calculations of two-point statistics in non-parallelepiped material systems.
+The use of Bunge-Euler angles in the reduction of local states \cite{bunge, yabansu14} were helpful in reducing the amount of calculations needed.
