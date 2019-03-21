@@ -4,11 +4,8 @@
 
 \subsection{Crystal structure}
 
-One of the key characteristics governing most of the properties of condensed matter is the crystal structure of a material.
-The crystal structure is thus important in characterizing material.
-
 Zinc oxide is a metal oxide semiconductor having a hexagonal crystal structure.
-In studies such as those of \citeA{gao08} and \citeA{fdoping}, there are three identified main peaks in the diffaction pattern (see Characterization Methods) of zinc oxide.
+In studies such as those of \citeA{gao08} and \citeA{fdoping}, there are three identified main peaks in the diffaction pattern of zinc oxide.
 These three peaks are the first three peaks in the diffraction pattern of ZnO found roughly at $2\theta \in \{32\degg , 34\degg , 36\degg\}$.
 The planes of diffraction are $(100)$, $(002)$, and $(101)$, respectively, with the highest peaks at the $(002)$ plane suggesting preferrential orientation in the \textit{c}-axis.
 With regard to flat surfaces, this suggests formation of vertical rod-like structures from the substrates.
@@ -32,15 +29,13 @@ Just as different processing parameters have led to differences in material crys
 
 Research on zinc oxide thin films as gas sensors by exploiting the reversible reactions of reducing gases to the surface of the material \cite{florido17}.
 These surface reactions change the movement of charges within the crystal structures of materials affecting their \emph{resistivity}.
-There is more literature that shows how crystal structures affect the electrical resistivity and gas sensing response of metal oxide semiconductors from theoretical studies such as of \citeA{dey} and \citeA{powerlaw} to \textit{in silica} studies like involving DFT \cite{dft}; however, these will not be focused on in this study.
+There are more literature that show how crystal structures affect the electrical resistivity and gas sensing response of metal oxide semiconductors from theoretical studies such as of \citeA{dey} and \citeA{powerlaw} to \textit{in silica} studies like involving DFT \cite{dft}.
 
 The importance of being able to computationally predict the properties similar to the \textit{in silica} study referred to above is a huge milestone in predicting properties given the structure of a material.
 
 \subsection{Successive ionic layer adhesion and reaction processes}
 
-Successive ionic layer adhesion and reaction (SILAR) processes are a family of processes wherein materials are deposited onto substrates by means of successive surface reactions.
-The processes described will be based on the study by \citeA{gao08}.
-
+Successive ionic layer adhesion and reaction (SILAR) processes are a family of processes wherein materials are deposited onto substrates by means of successive surface reactions \cite{gao08}.
 The processes consist of two main phases: a \emph{deposition} phase and an \emph{annealing} phase.
 The deposition phase in material fabrication involves a set of precursor solutions: cationic solutions, complexing solutions, and anionic solutions, to perform the reactions on the surface of the substrate.
 The three solutions are aqueous \cite{gao08}.
@@ -77,15 +72,7 @@ Studies by \citeA{vargas08}, \citeA{vargas2}, \citeA{gao08}, and \citeA{fdoping}
 
 Crucial in most multiscale modeling methodologies is the development of elements of finite volume that reflects the general physics of the macrostructure.
 Representative volume elements (RVE) are images of the material chosen such that the overall distribution of the \emph{local states} and their interactions may be able to represent the underlying mechanisms (physics) of the whole structure at a particular length scale.
-From here onward, the terms regarding RVEs will be defined as follows:
-
-\begin{enumerate}
-  \item Probe volume ($S$) - \emph{material volume} being studied (same as RVE)
-  \item Voxel ($s$) - \emph{small, discrete} volume elements taken from an RVE ($s \in S$)
-  \item Local state space ($H$) - set of all realizable physical and chemical properties representing material characteristics at a \emph{particular length scale}
-  \item Local state ($h$) - an element of the local state space ($h \in H$)
-  \item Boundary conditions ($\aleph$) - a set of requirements for interactions within $S$
-\end{enumerate}
+For reference, definitions are as follows \cite{bone,bunge,cnn,gupta15,polar,sun17,yabansu14}: the probe volume ($S$) represents the material volume to be studied, it is the same as the RVE of interest, a voxel ($s$) is a small, discrete volume element taken from $S$, the local state space $H$ is the set of all realizable physical and chemical properties representing material characteristics a local state $h$ is an element of $H$, finally boundary conditions $\aleph$ are a set of requirements for interactions within $S$.
 
 These definitions are important in establishing concepts regarding the use of RVEs in different property homogenization models.
 As will be seen in later discussions, $S$ and $\aleph$, but not $s, H, h$, will have slightly varied definitions depending on the data needed by specific modeling techniques.
@@ -103,12 +90,12 @@ Their work, split into six sections of rigorous mathematical manipulation, invol
 The steps in proof done by these researchers present a method in developing homogenization models using different representations of an RVE.
 It is worth noting that the definition of the RVE is flexible for as long as proper conditions are imposed.
 
-These finite element methods are \emph{very} effective in modeling the interactions of different materials and their configurations within an RVE.
-Due to the complexity of the implementation of this method, computer simulations may run for hours, which is not efficient in rapid, high-throughput materials processing.
+These finite element methods are \emph{very} effective in modeling the interactions of different materials and their configurations within an RVE \cite{bone,cosserat}.
+Due to the complexity of the implementation of this method, computer simulations may run for hours, which is not efficient in rapid, high-throughput materials processing \cite{cnn}.
 
 \subsection{Deep learning methods}
 
-With the development of the various fields of artificial intelligence, many different modeling techniques have been developed, especially in the areas of image recognition, and multivariable property prediction with the use of convolutional and artifical neural networks.
+With the development of the various fields of artificial intelligence, many different modeling techniques have been developed, especially in the areas of image recognition, and multivariable property prediction with the use of convolutional and artifical neural networks \cite{cnn}.
 A homogenization model was developed by \citeA{cnn} for predicting the ionic conductivity of ceramics using convolutional neural networks.
 The research was done in order to determine the feasibility of using convolutional neural networks in microstructure image processing, and to predict the desired property from image analyses.
 
@@ -124,7 +111,7 @@ In order to circumvent this problem and to provide a basis for model classificat
 This may be a good protocol on studying how CNNs work internally and provide a one-way theories to predict desired properties.
 
 Another problem posed by the use of CNNs, not mentioned in the research, is the unidirectional flow of information.
-As evident from the research, the desired property, given different RVEs can be calculated; however, even with the introduction of saliency maps, it may still be difficult to reconstruct an RVE and its processing history from the properties desired.
+As evident from the research, the desired property, given different RVEs can be calculated; however, even with the introduction of saliency maps as above study described, it may still be difficult to reconstruct an RVE and its processing history from the properties desired.
 This is the case with most engineering problems.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -172,12 +159,7 @@ The ones cited are studies on two-phase material systems, polycrystalline system
 They have shown through a case study that it is possible to apply different image processing techniques such as image masking and padding for the calculation of spatial correlations from modified microstructure functions.
 They have done this through the introduction of padding modifications and masking functions, which directly change the algorithm for the calculation of spatial correlations.
 In this two-phased material structure, given that image resolution is fine enough, states $h_0$ and $h_1$, \emph{eigenstates}, are assigned to the voxels $s \in S$.
-These eigenstates are defined as follows:
-
-\[
-  h_0 = 0 \hspace{1in}
-  h_1 = 1
-\]
+These eigenstates are defined by the presence $h_1 = 1$ or absence $h_0 = 0$ of the state of interest.
 
 The use of $h_1$ for the identification of a local state $h$ indicates that $h_1$ occupies the entirety of $s$, while $h_0$ is used for representing the other local state.
 One problem as noted of this classification is the fact that the definition of $H$ may be based on researcher bias \cite{cnn}.
@@ -197,7 +179,7 @@ This can be circumvented by the definition of \emph{N-point statistics} such as 
 \subsection{One-point spatial correlations}
 
 One-point spatial correlations define the expected probability of the local state to appear in the whole RVE.
-This is equivalent to the \emph{volume fraction} occupied by a certain $h$ for in $S$.
+This is equivalent to the \emph{volume fraction} occupied by a certain $h$ for in $S$ \cite{delin}.
 By rearrangement of an equation above:
 
 \[
@@ -209,7 +191,7 @@ The calculation of the this statistic is easy and increases linearly with respec
 
 \subsection{Two-point spatial correlations}
 
-Two-point correlations are a type of N-point statistics that define the \emph{joint probability} of locating two local states within voxels $s$ separated by a displacement vector $\vec{t}$.
+Two-point correlations are a type of N-point statistics that define the \emph{joint probability} of locating two local states within voxels $s$ separated by a displacement vector $\vec{t}$ \cite{delin}.
 Usually, to define these statistics and easily evaluate them, the vectors are assigned into indices from $0$ to $\lvert S-1\rvert$.
 The ``translation-invariant'' two-point spatial correlations are defined as:
 
@@ -223,7 +205,7 @@ The studies mentioned above, including \citeA{polar}, have different methods of 
 
 All of the cited literature on the topic similarly defined two-point spatial correlations as a \emph{convolution} operation on two probability densities.
 They all have exploited the transformation of the microstructure function into spectral space via discrete Fourier transforms (DFT).
-The properties of complex numbers have been exploited in many different ways by the cited literature in calculating the said statistics.
+The properties of complex numbers have been exploited in many different ways by the cited literature in calculating the said statistics \cite{delin,polar,sun17,bunge,yabansu14}.
 
 The calculations in spectral space have been shown to have drastically reduced time complexities \cite{delin}.
 \citeA{polar} used the expression of complex numbers in polar form to describe ``rotationally invariant'' spatial correlations in spectral space.
