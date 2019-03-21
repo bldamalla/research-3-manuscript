@@ -2,14 +2,14 @@
 \section{Thin Film Fabrication}
 Thirty glass substrates, measuring $1"\times0.25"$, were cut from microscope slides.
 These substrates were subject to three successive ionic layer adhesion and reaction (SILAR) processes (Table \ref{tab:processes}).
-All of the SILAR processes consist of a certain number of deposition cycles from a fixed precursor solution with $0.095M$ Zn$^{2+}$ and $0.190M$ NaOH and a thermal annealing at certain temperatures \cite{ gao08, florido17}.
+All of the SILAR processes consist of a certain number of deposition cycles from a fixed precursor solution with $0.095M$ Zn$^{2+}$ and $0.190M$ NaOH and a thermal annealing at certain temperatures \cite{gao08, florido17}.
 
 \begin{table}
   \caption[SILAR Processes]{Processing parameters manipulated and SILAR processes}
   \centering
   \begin{tabular}{c c c c}
     \hline\hline
-    --- & S1 & S2 & S3 \\
+     & S1 & S2 & S3 \\
     \hline
     Depostion cycles & 100 & 75 & 100 \\
     Annealing temperature & 450$\degg$C & 450$\degg$C & 500$\degg$C \\[1ex]
@@ -69,6 +69,7 @@ For each of the calculated two point spatial correlations, the values have under
 This is done with \emph{MultivariateStats.jl}, a package available for multivariate statistical analysis \cite{mvstats}.
 Optimal orientation is determined when the variance of the dimensionally-reduced two point statistics, \textit{i.e. the matrix trace of the covariance matrix} is minimized.
 
-The plots for the two-point statistics are manually compared.
-Partial least squares analysis (PLSA) is done to compare the ability of the DMF to capture the variation of derived sheet resistance values.
-Evaluation of the optimal microstructure function will be based on the following parameters: variance capture using PLSA and qualitative assessment of clustering of microstructure ensembles.
+\subsection{Determination of optimal microstructure function}
+The plots for the two-point statistics were manually compared.
+Partial least squares analysis (PLSA) was done to compare the ability of the DMF to capture the variation of derived sheet resistance values.
+Evaluation of the optimal microstructure function was based on the following parameters: variance capture using PLSA and qualitative assessment of clustering of microstructure ensembles.
