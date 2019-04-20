@@ -7,11 +7,21 @@ Figure \ref{fig:hpo} shows images of thin films under a $40\times$ magnification
 From the images it can be observed that material does not completely cover the whole substrate.
 Moreover, the distribution of the particles was random, as was verified by image analysis techniques from the MKS framework in a later discussion.
 
-% replace figure as soon as possible
 \begin{figure}
   \centering
-  \includegraphics[scale=0.3]{FourPoint.png}
-  \caption[Material images under HPO]{Material images taken under high power objective lens of compound microscope.}
+  \begin{subfigure}{.8\textwidth}
+    \centering
+    \includegraphics[scale=0.1]{s2.JPG}
+    \caption[Dark areas in films]{An image capturing one material state. It can be seen that there are dark areas.}
+    \label{fig:dark}
+  \end{subfigure}
+  \begin{subfigure}{.8\textwidth}
+    \centering
+    \includegraphics[scale=0.1]{s3.JPG}
+    \caption[Light areas in films]{An image capturing another material state. It can be seen that there are light areas shaped like flakes.}
+    \label{fig:light}
+  \end{subfigure}
+  \caption[HPO images of films]{Images taken using high poewr objective lens of a digital compound microscope. It can be seen that there are dark colored areas in Figure \ref{fig:dark} and light colored areas in Figure \ref{fig:light}}
   \label{fig:hpo}
 \end{figure}
 
@@ -22,7 +32,7 @@ It can be said that the formation of material using the processes specified were
 
 \subsection{Images from scanning electron microscopy}
 
-Figure \ref{fig:sem} shows images of thin films under a multiple magnification levels.
+Figure \ref{fig:sem} shows images of thin films under multiple magnification levels.
 One of the images show the side profile of one of the thin films showing its thickness.
 % check this value later on
 The thickness of the film is reported to be $\SI{50}{\micro\meter}$.
@@ -30,10 +40,26 @@ The thickness of the film is reported to be $\SI{50}{\micro\meter}$.
 Comparing to \citeA{florido17}, the thickness of the fabricated thin film was reported to be $\SI{50}{\micro\meter}$.
 This indicates that the processes used produced films of similar thickness despite the difference in number of deposition cycles used.
 
-% replace figure as soon as possible
 \begin{figure}
   \centering
-  \includegraphics[scale=0.4]{FourPoint.png}
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[scale=0.4]{dist.png}
+    \caption{SEM image taken at $1500\times$ showing distribution of objects in the substrate}
+    \label{fig:dist}
+  \end{subfigure}
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[scale=0.4]{thicc.png}
+    \caption{SEM image taken at $5000\times$ showing thickness of film layer}
+    \label{fig:thicc}
+  \end{subfigure}
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[scale=0.4]{flex.png}
+    \caption{SEM image taken at $20000\times$ showing zinc oxide crystals}
+    \label{fig:flex}
+  \end{subfigure}
   \caption[Material images under SEM]{Material images taken under scanning electron microscope at different magnification values. The images show the crystals present, particle distribution, and film thickness.}
   \label{fig:sem}
 \end{figure}
