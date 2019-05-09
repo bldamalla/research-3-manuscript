@@ -8,3 +8,6 @@
 *.toc
 *.lot
 *.lof
+
+% remove on release
+*.pdf
