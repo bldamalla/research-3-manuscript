@@ -1,136 +1,65 @@
 \chapter{Results and Discussion}
 
-\section{Thin film characterization}
-\subsection{Images from optical microscopy}
+\section{Qualitative differences in film structure}
 
-Figure \ref{fig:hpo} shows images of thin films under a $40\times$ magnification.
-From the images it can be observed that material does not completely cover the whole substrate.
-Moreover, the distribution of the particles was random, as was verified by image analysis techniques from the MKS framework in a later discussion.
+Three sets of thin films have been fabricated from three varying successive ionic layer adhesion and reaction processes.
+Shown in Figure 3 are some of the images that were captured using the high power objective lens of a digital compound microscope.
 
 \begin{figure}
   \centering
-  \begin{subfigure}{.8\textwidth}
+  \begin{subfigure}{.4\textwidth}
     \centering
-    \includegraphics[scale=0.1]{s2.JPG}
-    \caption[Dark areas in films]{An image capturing one material state. It can be seen that there are dark areas.}
+    \includegraphics[scale=0.065]{s2.JPG}
     \label{fig:dark}
   \end{subfigure}
-  \begin{subfigure}{.8\textwidth}
+  \begin{subfigure}{.4\textwidth}
     \centering
-    \includegraphics[scale=0.1]{s3.JPG}
-    \caption[Light areas in films]{An image capturing another material state. It can be seen that there are light areas shaped like flakes.}
+    \includegraphics[scale=0.065]{s3.JPG}
     \label{fig:light}
   \end{subfigure}
-  \caption[HPO images of films]{Images taken using high poewr objective lens of a digital compound microscope. It can be seen that there are dark colored areas in Figure \ref{fig:dark} and light colored areas in Figure \ref{fig:light}}
+  \caption[HPO images of thin films]{Microstructure images of a thin film taken under HPO ($40\times$ magnification)}
   \label{fig:hpo}
 \end{figure}
 
-This means that \textbf{no} accurate measurements about the specific properties of the material can be measured in the length scale.
-In order to measure the resistivity of the material, for example, it is important that the material completely covers the length from the current source and sink for four-point probe sensing.
-Since there are spaces between material structures, electrical resistance is increased by the interaction with glass.
-It can be said that the formation of material using the processes specified were not able to yield replicable results.
+It can be seen from the images that the volume covered by the particles in the figures are not ordered (the structures are amorphous).
 
-\subsection{Images from scanning electron microscopy}
+\section[Comparison of spatial correlations]{Comparison of two point statistics between probe volumes of a thin film}
 
-Figure \ref{fig:sem} shows images of thin films under multiple magnification levels.
-One of the images show the side profile of one of the thin films showing its thickness.
-% check this value later on
-The thickness of the film is reported to be $\SI{50}{\micro\meter}$.
-% also look for the results of the other researchers on their values for thin film thickness and compare the values.
-Comparing to \citeA{florido17}, the thickness of the fabricated thin film was reported to be $\SI{50}{\micro\meter}$.
-This indicates that the processes used produced films of similar thickness despite the difference in number of deposition cycles used.
+Discrete microstructure functions were derived from the image data by means of image segmentation using the Yen binary thresholding method.
+Upon studying the two point spatial correlations in 360 images, 120 for each type of thin film (S1, S2, S3), it is shown that through principal component analysis that there is no significant difference in the distributions of the particles in the films \cite{gupta15}.
+Separated contour plots of the data are shown in Figure \ref{fig:cont}.
+The contour plots show the regions where the joint probability of finding zinc oxide in the films at two different sites is the same.
+From the figures, it can be observed that the variances of the films are large due to the spacing between the lines and that the shapes of the contours are different.
+This suggests that the particles are randomly distributed in the substrate.
 
 \begin{figure}
   \centering
-  \begin{subfigure}{.5\textwidth}
-    \centering
-    \includegraphics[scale=0.4]{dist.png}
-    \caption{SEM image taken at $1500\times$ showing distribution of objects in the substrate}
-    \label{fig:dist}
-  \end{subfigure}
-  \begin{subfigure}{.5\textwidth}
-    \centering
-    \includegraphics[scale=0.4]{thicc.png}
-    \caption{SEM image taken at $5000\times$ showing thickness of film layer}
-    \label{fig:thicc}
-  \end{subfigure}
-  \begin{subfigure}{.5\textwidth}
-    \centering
-    \includegraphics[scale=0.4]{flex.png}
-    \caption{SEM image taken at $20000\times$ showing zinc oxide crystals}
-    \label{fig:flex}
-  \end{subfigure}
-  \caption[Material images under SEM]{Material images taken under scanning electron microscope at different magnification values. The images show the crystals present, particle distribution, and film thickness.}
-  \label{fig:sem}
+  \includegraphics[scale=0.5]{contour.png}
+  \caption[Contour plots of spatial correlations]{Contour plots of two point spatial correlations within sections of the same thin film}
+  \label{fig:cont}
 \end{figure}
 
-\subsection{Energy dispersive spectroscopy analysis}
+\section[Comparison of spatial correlations 2]{Comparison of two point statistics in similar probe volumes of different thin films}
 
-Figure \ref{fig:edx} shows the EDX spectra showing the different atoms present in a part of the sample.
-
-% replace figure as soon as possible
-\begin{figure}
-  \centering
-  \includegraphics[scale=0.3]{FourPoint.png}
-  \caption[EDX spectra of thin films]{Energy dispersive spectroscopy spectra of sections in thin film samples.}
-  \label{fig:edx}
-\end{figure}
-
-\subsection{Structure elucidation from x-ray diffraction}
-
-Figure \ref{fig:xrd} shows the x-ray diffraction spectra of the thin films.
-
-% replace figure as soon as possible
-\begin{figure}
-  \centering
-  \includegraphics[scale=0.3]{FourPoint.png}
-  \caption[XRD spectra of ]{X-ray diffraction spectra of thin film samples}
-  \label{fig:xrd}
-\end{figure}
-
-\subsection{Four-point probe sensing}
-
-Table \ref{tab:fps} shows the average sheet resistance values along with the statistical range.
-
-% replace table content as soon as possible.
-\begin{table}
-  \centering
-  \begin{tabular}{ c c c }
-    \hline
-    \hline
-    1 & 2 & 3 \\
-    4 & 5 & 6 \\
-    \hline
-  \end{tabular}
-  \label{tab:fps}
-\end{table}
-
-\section{Development of materials knowledge framework}
-\subsection{Calculation of two point spatial correlations}
-
-Two point spatial correlations (autocorrelations) were calculated based on two main material phases as seen in the optical microscopy images: the presence and absence of zinc oxide in the structure.
-Contour plots showing the statistics are shown in Figure \ref{fig:spat}.
+Shown in Figure \ref{fig:pca} are the plots of transformed microstructure function compositions of the particles in the different thin films.
+It can be noticed that the plots show that the distributions are random with increasing variance from S1, S2, and S3.
+Due to homogeneity of two-point statistics between differentially fabricated thin films, such information cannot be incorporated with existing spatial correlations to make a more representative DMF.
 
 \begin{figure}
   \centering
-  \includegraphics[scale=0.4]{FourPoint.png}
-  \caption[Contour plots of autocorrelations]{Contour plots showing autocorrelations of the probability of finding zinc oxide in the material. It can be analytically shown that the autocorrelation for the absence of zinc oxide is similar in distribution.}
-  \label{fig:spat}
-\end{figure}
-
-\subsection{Principal component analysis and DMF comparison}
-
-The autocorrelations underwent principal component analysis for dimensional reduction.
-This was used to determine whether there are significant difference to the autocorrelations within the structures and to determine of there are processing factors affecting the difference.
-Some of the plots are shown as Figure \ref{fig:pca}.
-
-\begin{figure}
-  \centering
-  \includegraphics[scale=0.3]{FourPoint.png}
-  \caption[Autocorrelations after PCA]{Dimensionally-reduced spatial correlations}
+  \includegraphics[scale=0.5]{pca.png}
+  \caption[Transformed spatial correlations]{Corrected transforms for two-point spatial correlations.}
   \label{fig:pca}
 \end{figure}
 
-\subsection{Partial least squares analysis}
+In a similar study on zinc oxide thin film structure by \citeA{gao08}, they have treated the glass substrate by exposing glass in dilute sulfuric acid.
+This led to the adhesion of particulate matter in the aqueous solution.
+This process may produce thin films with particulate matter in a non-randomly distributed manner, suggesting that there may be notable differences in two-point spatial correlations.
+\citeA{gao08} have prescribed the boiling method coupled witha drying phase between deposition cycles to further improve the crystallinity of the material.
 
-Unfortunately, due to the homogeneity of the samples as shown by the two point spatial correlations, no partial least squares model can be made from the data to capture the difference in sheet resistance.
+From Figure \ref{fig:cont}, it can be seen that the two-point spatial correlations calculated by the different DMFs have different contour plots.
+This is due to the difference in parameters taken into account durin definition (RVE size).
+Unfortunately, as was shown through two-point statistics calculations, the structures are random \cite{gupta15}.
+This means that no proper modeling methodology can be done due to the homogeneity of the data.
+
+A partial least squares analysis was not performed duw to the homogeneity of two-point statistics as shown through principal component analysis.

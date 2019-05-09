@@ -1,19 +1,25 @@
 \chapter{Introduction}
 \section{Background of the Study}
 Zinc oxide is a metal oxide semiconductor that has many different uses based on its structure such as in thin film electronics.
-Zinc oxide thin films are used in a wide variety of applications as gas sensors \cite{florido17} and as photovoltaic cells \cite{fetsense}. In order for the material to perform predictably, it is necessary to be able to correlate processing parameters to structural characteristics and property manifestations \cite{florido17, fetsense}.
+Zinc oxide thin films are used in a wide variety of applications as gas sensors \cite{florido17} and as photovoltaic cells \cite{fetsense}.
+In order for the material to perform predictably, it is necessary to be able to correlate processing parameters to structural characteristics and property manifestations \cite{florido17, fetsense}.
+
+There are different methods for thin film fabrication including successive ionic layer adhesion and reaction processes \cite{florido17}.
+These processes are a family of processes consisting of successive ionic material depositions onto a substrate and thermal annealing \cite{gao08}.
+These process have been considered to be studied by researchers due to the processes being cost-effective and easily modifiable \cite{gao08, vargas08, vargas2}.
+There are three studied fabrication paramaters of interest which include the ionic precursor solutions, number of deposition cycles and annealing temperature \cite{gao08, vargas08}.
+By varying these parameters, it has been shown, by the aforecited studies that there are differences in thin film structure and property.
+Aside from empirical conclusions as of the studies, there seems to be little research done on how processing affects material structure and property.
 
 Due to the promise of rapid, high-throughput materials processing brought by data science driven approaches to materials processing through materials knowledge systems (MKS) frameworks \cite{gupta15, sun17, yabansu14} the field of materials informatics has grown.
+The MKS framework, as defined by \citeA{yabansu14}, is dependent on the definition of a microstructure function $m_r^n$, representing the probability density of finding a specific local state $n \in N$, characterized by physical and chemical properties, at a spatial bin $r \in R$.
+A number of studies have proposed the MKS to use discretized microstructure functions in order to apply statistical measures \cite{gupta15, sun17, yabansu14}.
+Numerous studies regarding the use of MKS frameworks have produced different microstructure functions depending on the application of the materials of interest ranging from two to ten and more local states \cite{gupta15, sun17, yabansu14}. 
 
-There are several studies on computational simulations regarding material properties based on material structure and vice versa \cite{gupta15, yabansu14}.
-
-The MKS framework, as defined by \citeA{yabansu14}, is dependent on the definition of a microstructure function $m_r^n$, representing the probability density of finding a specific local state $n \in N$, characterized by physical and chemical properties, at a spatial bin $r \in R$. A number of studies have proposed the MKS to use discretized microstructure functions in order to apply statistical measures \cite{gupta15, sun17, yabansu14}. Numerous studies regarding the use of MKS frameworks have produced different microstructure functions depending on the application of the materials of interest ranging from two to ten and more local states \cite{gupta15, sun17, yabansu14}. 
-
-Property homogenization, within a probe volume, can be easily achieved through calculation and regression of calculated two point spatial correlations derived from assumptions of periodicity of the microstructure function in a given probe volume $V$. Research done by \citeA{sun17} has shown that the assumption of periodicity of the microstructure function in a probe volume can make drastic computational improvements to the MKS compared to using finite element methods.
-
-Currently, there exists an implementation of the MKS framework in the Python programming language (PyMKS) \cite{pymks}. The said framework implementation is maintained by researchers Georgia Institute of Technology and has been developed by a number of contributors to the repository. It is currently available on Github as an open-source project licensed under the MIT license.
-
-As a rapidly growing computational language, Julia has proven to be more efficient and effective as other computational programming languages such as Matlab, Python (NumPy), and Octave \cite{julia15}. Examples of scientific applications are as a simulator for different systems dynamics through BioSimulator.jl \cite{biosim}, for different quantum systems through QuantumOptics.jl \cite{qoptics}, and modeling protein electrostatics using finite element methods through NESSie.jl \cite{nessie}.
+Currently, there exists an implementation of the MKS framework in the Python language (PyMKS) \cite{pymks}.
+The said framework implementation is maintained by researchers Georgia Institute of Technology and has been developed by a number of contributors to the repository.
+It is currently available on Github as an open-source project licensed under the MIT license.
+The Julia languate is another computational programming language that currently gains popularity on Github \cite{julia15}.
 
 \section{Objectives of the Study}
 The study aims to be able to define a new, simple microstructure function for the effective creation of MKS in developing material PSP linkages for the distribution of adhered particles of zinc oxide onto glass substrates.
@@ -25,11 +31,11 @@ Specifically, the study aims to provide a new platform for materials informatics
 
 \section{Significance of the Study}
 Some of the numerous applications of zinc oxide thin films are dependent on the different distribution-dependent properties of the material, including thin film sheet resistance, porosity, and transmittance.
-The computational modeling of zinc oxide material structure with respect to processing parameters and properties is a significant milestone for the rapid, high-throughput production of precise application-specific materials.
-
+The success of the study will indicate tahat there is a promise for growth in thin film semiconductor processing and analysis in diverse applications by reducing the amount of human effort, resources, and time needed.
 The expression of the MKS framework, case-dependent or independent, in multiple languages allows for the growth of the framework into several applications allowing open source communities to further develop the capabilities of the framework.
 
 \section{Scope and Limitations}
-The study mainly focuses on determining a family of microstructure functions that can be useful for building PSP linkages given sufficient material characterization.
-Since characterization is not readily accessible, structural characteristics used may be of low resolution.
-Thus, heavy caution must be observed in interpreting the results of the study.
+The study focuses on the comparison of thin films fabricated using three different SILAR processes varying in two processing parameters: number of deposition cycles and annealing temperature.
+The thin films were only characterized using optical microscopy, x-ray diffraction, and four-point probe sensing.
+Despite the number of characterization methods used, the structures of the differentially fabricated thin films were not fully elucidated.
+Since there is no implementation of the MKS framework in the programming language of interest, the analyses and code were based on the biasses of the researcher on the field.

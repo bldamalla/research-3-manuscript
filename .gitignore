@@ -9,5 +9,5 @@
 *.lot
 *.lof
 
-% remove on release
-*.pdf
+# remove on release
+main.pdf
