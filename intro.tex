@@ -11,18 +11,21 @@ There are three studied fabrication parameters of interest, which include the io
 By varying these parameters, \citeA{gao08,vargas08, vargas2} have shown that there are differences in thin film structure and property.
 Aside from empirical conclusions as of the aforementioned studies, there seems to be little research done on how processing affects material structure and property.
 
-Due to the promise of rapid, high-throughput materials processing brought by data science driven approaches to materials processing through materials knowledge systems (MKS) frameworks \cite{gupta15, sun17, yabansu14} the field of materials informatics has grown.
-There are several studies on computational simulations regarding material properties based on material structure and vice versa \cite{gupta15, yabansu14}.
+Due to the promise of rapid, high-throughput materials processing brought by data science driven approaches to materials processing through materials knowledge systems (MKS) frameworks \cite{yabansu14, gupta15, sun17} the field of materials informatics has grown.
+There are several studies on computational simulations regarding material properties based on material structure and vice versa \cite{yabansu14, gupta15}.
 
 Currently, there exists an implementation of the MKS framework in the Python programming language (PyMKS) \cite{pymks}. The said framework implementation is maintained by researchers Georgia Institute of Technology and has been developed by a number of contributors to the repository.
 It is currently available on Github as an open-source project licensed under the MIT license.
 The Julia language is another computational programming language that currently gains popularity on Github \cite{julia15}.
 
 \section{Objectives of the Study}
-The study aims to compare the structure of zinc oxide thin films fabricated using three different successive ionic layer adhesion and reaction processes.
-Specifically, the study will attempt to cover and discuss necessary measures that will aid in the creation of effective discrete spatial statistics of the particles, particle boundaries, and null spaces within the material structure, which will be used to find correlations to manipulations in the number of deposition cycles and annealing temperature.
+The study aims to compare the structure of zinc oxide thin films fabricated using three different successive ionic layer adhesion and reaction processes varying in the number of deposition cycles and annealing temperature.
+Specifically, the structures of differentially fabricated thin films are compared in three degrees.
+First, in a degree of description of thin film particles, either their presence or absence, wherein their distribution can be observed qualitatively observed and quantitatively justified.
+Second, in a degree of description of thin film particles wherein their orientation and crystal structure can be observed and verified as zinc oxide.
+Lastly, in a degree of description of thin film property with respect to its structure wherein correlations can be made to describe a hypothesized linear relationship between material presence (zinc oxide) spatial correlation and thin film resistivity.
 
-The study also aims to be able to create a MKS methodology template in the Julia programming language.
+To do these, the study aims to propose a MKS methodology template in the Julia programming language.
 Specifically, the study aims to provide a new platform for materials informatics using the features of the programming language.
 
 \section{Significance of the Study}
